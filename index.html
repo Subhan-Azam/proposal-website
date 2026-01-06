@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Proposal 💍</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Animated Background Particles -->
+    <div class="particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading" class="loading-screen">
+      <div class="loading-heart">
+        <div class="heart-beat"></div>
+      </div>
+      <p class="loading-text">Preparing something special...</p>
+    </div>
+
+    <div id="page1" class="container">
+      <div class="title-container">
+        <h1 class="main-title">Will you be mine forever? 💍</h1>
+        <div class="subtitle">This moment is ours...</div>
+      </div>
+
+      <div class="buttons">
+        <button id="yesBtn" class="btn-yes">YES ❤️</button>
+        <button id="noBtn" class="btn-no">NO 🙃</button>
+      </div>
+    </div>
+
+    <div id="page2" class="hidden">
+      <div class="celebration-container">
+        <h1 class="celebration-title">
+          You just made me the happiest person alive ❤️
+        </h1>
+        <p class="celebration-subtitle">Forever starts now…</p>
+        <div class="rings-animation">
+          <div class="ring ring1"></div>
+          <div class="ring ring2"></div>
+          <div class="diamond">💎</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="page3" class="hidden">
+      <div class="final-container">
+        <div class="floating-hearts">
+          <div class="floating-heart">💕</div>
+          <div class="floating-heart">💖</div>
+          <div class="floating-heart">💝</div>
+          <div class="floating-heart">💗</div>
+        </div>
+        <div class="heart-main"></div>
+        <blockquote class="final-quote">
+          "I choose you. <br />
+          Today. Tomorrow. Always."
+        </blockquote>
+        <h3 class="signature">– Yours, Subhan 💖</h3>
+        <div class="stars">
+          <div class="star">⭐</div>
+          <div class="star">✨</div>
+          <div class="star">⭐</div>
+          <div class="star">✨</div>
+        </div>
+      </div>
+    </div>
+
+    <audio id="song" src="song.mpeg" autoplay loop muted></audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
