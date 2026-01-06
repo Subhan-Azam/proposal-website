@@ -9,40 +9,11 @@ const page3 = document.getElementById("page3");
 const song = document.getElementById("song");
 
 // Initialize
-let audioStarted = false;
-
-function startAudio() {
-  if (!audioStarted) {
-    song.muted = false; // Unmute the audio
-    song.play().catch((e) => console.log("Audio autoplay prevented:", e));
-    audioStarted = true;
-  }
-}
-
-// Try to start audio on any user interaction
-function addAudioInteractionListeners() {
-  const events = ['click', 'touchstart', 'mousedown', 'keydown'];
-  
-  events.forEach(event => {
-    document.addEventListener(event, startAudio, { once: true });
-  });
-}
-
 window.addEventListener("load", () => {
   // Hide loading screen after 3 seconds
   setTimeout(() => {
     loading.style.display = "none";
-    addAudioInteractionListeners();
   }, 3000);
-  
-  // Try to play immediately if autoplay is allowed
-  song.play().then(() => {
-    audioStarted = true;
-    song.muted = false;
-  }).catch((e) => {
-    console.log("Initial autoplay prevented, waiting for user interaction");
-    // Audio will start on first user interaction
-  });
 });
 
 // Enhanced NO button movement with fun reactions
@@ -211,10 +182,8 @@ yesBtn.addEventListener("click", () => {
     page1.style.display = "none";
     page2.style.display = "block";
 
-    // Ensure music is playing and unmuted
-    song.muted = false;
+    // Try to play music
     song.play().catch((e) => console.log("Audio autoplay prevented"));
-    audioStarted = true;
   }, 1000);
 
   // Transition to final page
