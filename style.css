@@ -377,25 +377,6 @@ button {
   font-family: "Dancing Script", cursive;
   font-size: 3rem;
   margin-bottom: 20px;
-  animation: rainbow 2s ease infinite;
-}
-
-@keyframes rainbow {
-  0% {
-    color: #ff6b9d;
-  }
-  25% {
-    color: #ff9a9e;
-  }
-  50% {
-    color: #fecfef;
-  }
-  75% {
-    color: #ffecd2;
-  }
-  100% {
-    color: #ff6b9d;
-  }
 }
 
 .celebration-subtitle {
